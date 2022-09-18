@@ -12,11 +12,15 @@ int[] GetNumbersFibonachi(int n)
     arrayNumbersFibonachi[0] = 0;
     arrayNumbersFibonachi[1] = 1;
 
-    for (int i = 2; i < arrayNumbersFibonachi.Length; i++)
+    if (n < 2) return arrayNumbersFibonachi;
+    else
     {
-        arrayNumbersFibonachi[i] = arrayNumbersFibonachi[i - 1] + arrayNumbersFibonachi[i - 2];
+        for (int i = 2; i < arrayNumbersFibonachi.Length; i++)
+        {
+            arrayNumbersFibonachi[i] = arrayNumbersFibonachi[i - 1] + arrayNumbersFibonachi[i - 2];
+        }
+        return arrayNumbersFibonachi;
     }
-    return arrayNumbersFibonachi;
 }
 
 Console.Write("Введите число: ");
